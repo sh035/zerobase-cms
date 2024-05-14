@@ -1,18 +1,17 @@
 package userapi.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.envers.AuditOverride;
 import userapi.domain.SignUpForm;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Locale;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,7 +29,7 @@ public class Customer extends BaseEntity{
     private String phone;
     private LocalDate birth;
 
-    private LocalDate verifyExpiredAt;
+    private LocalDateTime verifyExpiredAt;
     private String verificationCode;
     private boolean verify;
 
