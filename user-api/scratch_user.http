@@ -1,0 +1,24 @@
+### 회원가입 ( 고객 )
+POST http://localhost:8080/signUp/customer
+Content-Type: application/json
+
+{
+    "birth": "1989-04-24",
+    "email": "saab35@naver.com",
+    "name": "myName".
+    "password": "pw",
+    "phone": 01000000000
+}
+### 로그인 ( 고객 )
+POST http://localhost:8080/signUp/customer
+
+### 회원 정보 조회 ( 고객 )
+
+### 잔액 변경 ( 고객 )
+
+###########################
+
+### 회원 가입 ( 셀러 )
+
+### 로그인 ( 셀러 )
+
