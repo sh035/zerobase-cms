@@ -9,7 +9,7 @@ import userapi.domain.model.Customer;
 import userapi.domain.model.Seller;
 import userapi.exception.CustomException;
 import userapi.exception.ErrorCode;
-import userapi.service.CustomerService;
+import userapi.service.customer.CustomerService;
 import userapi.service.seller.SellerService;
 
 @Service
