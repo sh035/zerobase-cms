@@ -10,7 +10,7 @@ import userapi.domain.model.Customer;
 import userapi.domain.model.Seller;
 import userapi.exception.CustomException;
 import userapi.exception.ErrorCode;
-import userapi.service.SignUpCustomerService;
+import userapi.service.customer.SignUpCustomerService;
 import userapi.service.seller.SellerService;
 
 import java.time.LocalDateTime;

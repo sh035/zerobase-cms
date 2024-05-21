@@ -9,8 +9,7 @@ import userapi.domain.customer.ChangeBalanceForm;
 import userapi.domain.customer.CustomerDto;
 import userapi.domain.model.Customer;
 import userapi.exception.CustomException;
-import userapi.exception.ErrorCode;
-import userapi.service.CustomerService;
+import userapi.service.customer.CustomerService;
 import userapi.service.customer.CustomerBalanceService;
 
 import static userapi.exception.ErrorCode.NOT_FOUND_USER;

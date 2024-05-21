@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-api/cms.user-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-api/cms.user-api.test.iml" />
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zerobase-domain/cms.zerobase-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/zerobase-domain/cms.zerobase-domain.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zerobase-domain/cms.zerobase-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/zerobase-domain/cms.zerobase-domain.test.iml" />
-=======
->>>>>>> 4134b77 (.)
     </modules>
   </component>
 </project>

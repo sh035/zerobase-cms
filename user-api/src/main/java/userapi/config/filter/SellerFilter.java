@@ -3,7 +3,6 @@ package userapi.config.filter;
 import com.zerobase.config.JwtAuthenticationProvider;
 import com.zerobase.domain.common.UserVo;
 import lombok.RequiredArgsConstructor;
-import userapi.service.CustomerService;
 import userapi.service.seller.SellerService;
 
 import javax.servlet.*;
