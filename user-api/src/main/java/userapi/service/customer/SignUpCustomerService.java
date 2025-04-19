@@ -1,4 +1,4 @@
-package userapi.service;
+package userapi.service.customer;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

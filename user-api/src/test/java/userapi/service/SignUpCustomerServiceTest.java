@@ -3,9 +3,9 @@ package userapi.service;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 import userapi.domain.SignUpForm;
 import userapi.domain.model.Customer;
+import userapi.service.customer.SignUpCustomerService;
 
 import java.time.LocalDate;
 

@@ -10,7 +10,7 @@ import userapi.domain.model.Customer;
 import userapi.domain.model.Seller;
 import userapi.exception.CustomException;
 import userapi.exception.ErrorCode;
-import userapi.service.SignUpCustomerService;
+import userapi.service.customer.SignUpCustomerService;
 import userapi.service.seller.SellerService;
 
 import java.time.LocalDateTime;
@@ -81,7 +81,7 @@ public class SignUpApplication {
         StringBuilder builder = new StringBuilder();
         return builder.append("Hello ").append(name)
                 .append("! Please Click Link for verification.\n\n")
-                .append("http://localhost:8080/signup/" + type + "/verify?email=")
+                .append("http://localhost:8081/signup/" + type + "/verify?email=")
                 .append(email)
                 .append("&code=")
                 .append(code).toString();
