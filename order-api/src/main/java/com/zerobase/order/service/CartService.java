@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CartService {
 
-    private RedisClient redisClient;
+    private final RedisClient redisClient;
 
     public Cart getCart(Long customerId) {
         return redisClient.get(customerId, Cart.class);

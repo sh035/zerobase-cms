@@ -13,12 +13,14 @@ repositories {
 
 ext{
     set('springCloudVersion', "2021.0.1")
+    querydslVersion = "5.0.0"
 }
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    querydsl.extendsFrom compileClasspath
 }
 
 dependencies {
@@ -36,6 +38,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // queryDSL
+    implementation 'com.querydsl:querydsl-jpa:5.0.0'
+    annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jpa'
+    annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api'
 
     // redis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
@@ -62,4 +70,26 @@ dependencyManagement {
 
 test {
     useJUnitPlatform()
+}
+
+// QueryDSL Q클래스 생성을 위한 설정
+def querydslSrcDir = layout.buildDirectory.dir('generated/sources/annotationProcessor/java/main').get().asFile
+
+// 소스 세트에 QueryDSL Q클래스 출력 디렉토리 추가
+sourceSets {
+    main {
+        java {
+            srcDirs += [ querydslSrcDir ]
+        }
+    }
+}
+
+// clean 작업 시 QueryDSL 출력 디렉토리 제거
+clean {
+    delete querydslSrcDir
+}
+
+// Gradle 5.0 이상에서는 Annotation Processor 출력 디렉토리가 자동으로 설정됨
+tasks.withType(JavaCompile).configureEach {
+    options.getGeneratedSourceOutputDirectory().set(querydslSrcDir)
 }
